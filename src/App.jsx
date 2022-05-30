@@ -1,7 +1,8 @@
-import './App.css';
 import React from "react"
+import { connect } from 'react-redux';  //method
 class App extends React.Component {
   render() {
+    console.log("redux===>", this.props)
     return (
       <div>
         <h1 style={{ textAlign: "center" }}>Hello React Redux`</h1>
@@ -10,5 +11,11 @@ class App extends React.Component {
   }
 }
 
+const mapStateToProps = (state) => (  //function
+  {                                 // return Oject save it to initial state
+    wel: "Hello Abid from mapState",
+  }
+)
 
-export default App;
+
+export default connect(mapStateToProps, null)(App);
