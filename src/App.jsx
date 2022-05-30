@@ -14,7 +14,10 @@ class App extends React.Component {
 const mapStateToProps = (state) => (  //function
   {                                 // return Oject save it to initial state
     wel: "Hello Abid from mapState",
-    name: state.name
+    name: state.reducer.name,
+    Application_Name: state.app.app_name,
+    UserName: state.auth.username,
+    Email: state.auth.email,
   }
 )
 
