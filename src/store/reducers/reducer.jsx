@@ -1,7 +1,7 @@
 // store 
 
 const Initial_data = {
-    name: "Sajid",
+    name: "red_Sajid",
 }
 
 export default (state = Initial_data) => {
