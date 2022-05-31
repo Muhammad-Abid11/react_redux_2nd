@@ -1,5 +1,6 @@
 import React from "react"
 import { connect } from 'react-redux';  //method
+import { set_data } from './store/action/index'
 class App extends React.Component {
   render() {
     console.log("redux===>", this.props)
@@ -31,9 +32,10 @@ const mapStateToProps = (state) => (  //function
 //  it contains functions 
 const mapDispatchToProps = (dispatch) => (  //function
   {                                         //object
-    data_set: () => {           //object_function
-      console.log("hello Dispatch")
-    }
+    data_set: () =>           //return_function_onclick
+      // console.log("hello Dispatch")
+      set_data()      //from action 
+
   }
 )
 
