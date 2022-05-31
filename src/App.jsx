@@ -8,7 +8,7 @@ class App extends React.Component {
       <div>
         <h1 style={{ textAlign: "center" }}>Hello React Redux`</h1>
 
-        <button onClick={() => this.props.data_set()}>SetData dispatch Function</button>
+        <button onClick={() => this.props.data_set("Data from App.jsx")}>SetData dispatch Function</button>
       </div>
     )
   }
@@ -32,10 +32,10 @@ const mapStateToProps = (state) => (  //function
 //  it contains functions 
 const mapDispatchToProps = (dispatch) => (  //function
   {                                         //object
-    data_set: () =>           //return_function_onclick
+    data_set: (data) =>           //return_function_onclick
       // console.log("hello Dispatch")
       // set_data()      //from action 
-      dispatch(set_data())
+      dispatch(set_data(data))
   }
 )
 
