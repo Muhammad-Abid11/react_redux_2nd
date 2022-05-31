@@ -34,8 +34,8 @@ const mapDispatchToProps = (dispatch) => (  //function
   {                                         //object
     data_set: () =>           //return_function_onclick
       // console.log("hello Dispatch")
-      set_data()      //from action 
-
+      // set_data()      //from action 
+      dispatch(set_data())
   }
 )
 
