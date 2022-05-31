@@ -8,7 +8,7 @@ class App extends React.Component {
       <div>
         <h1 style={{ textAlign: "center" }}>Hello React Redux`</h1>
 
-        <button onClick={() => this.props.data_set("Data from App.jsx")}>SetData dispatch Function</button>
+        <button onClick={() => this.props.data_set("Data from App.jsx sajid name removed")}>SetData dispatch Function</button>
       </div>
     )
   }
