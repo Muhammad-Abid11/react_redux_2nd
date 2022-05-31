@@ -6,10 +6,16 @@ class App extends React.Component {
     return (
       <div>
         <h1 style={{ textAlign: "center" }}>Hello React Redux`</h1>
+
+        <button onClick={() => this.props.data_set()}>SetData dispatch Function</button>
       </div>
     )
   }
 }
+
+// mapStateToProps  
+//  it contains values 
+
 
 const mapStateToProps = (state) => (  //function
   {                                 // return Oject save it to initial state
@@ -21,5 +27,14 @@ const mapStateToProps = (state) => (  //function
   }
 )
 
+// for state Update USE   "mapDispatchToProps"
+//  it contains functions 
+const mapDispatchToProps = (dispatch) => (  //function
+  {                                         //object
+    data_set: () => {           //object_function
+      console.log("hello Dispatch")
+    }
+  }
+)
 
-export default connect(mapStateToProps, null)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(App);
