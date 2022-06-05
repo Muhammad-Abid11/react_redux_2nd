@@ -3,7 +3,7 @@ const set_data = (data) => {
         // console.log("Hello from action")
         dispatch(           //anything pass from it receive in every reducers Action
             {
-                type: "SetData",
+                type: "SetData",    //mention type mendatory
                 data: data,
             }
         )
